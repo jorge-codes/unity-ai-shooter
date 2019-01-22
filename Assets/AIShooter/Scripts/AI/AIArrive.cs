@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class AIArrive : MonoBehaviour
 {
@@ -8,6 +6,7 @@ public class AIArrive : MonoBehaviour
     [SerializeField] private float _speed;
     [SerializeField] private Transform _target;
     private Vector3 _direction;
+    
     
     // Start is called before the first frame update
     void Start()
@@ -32,5 +31,6 @@ public class AIArrive : MonoBehaviour
         
         _direction.Normalize();
         transform.Translate(_direction * _speed * Time.deltaTime, Space.World);
+        transform.LookAt(_target);
     }
 }
