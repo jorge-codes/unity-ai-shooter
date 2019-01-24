@@ -4,6 +4,11 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float _speed;
     private Vector3 _direction;
+
+    public Vector3 Velocity
+    {
+        get { return _direction; }
+    }
     
     // Start is called before the first frame update
     void Start()
@@ -22,6 +27,8 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         transform.Translate(_direction * _speed * Time.deltaTime, Space.World);
+        transform.LookAt(transform.position + _direction);
     }
-    
+
+
 }
