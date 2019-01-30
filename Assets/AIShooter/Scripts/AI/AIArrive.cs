@@ -1,36 +1,18 @@
 ﻿using UnityEngine;
 
-public class AIArrive : MonoBehaviour
+public class AIArrive : AISeek
 {
     [SerializeField] private float _stopRadius;
-    [SerializeField] private float _speed;
-    [SerializeField] private Transform _target;
-    private Vector3 _direction;
-    
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    public override Steering GetSteering()
     {
-        if (_target == null)
-            return;
-        _direction = _target.position - transform.position;
-    }
+        float distance = Vector3.Distance(_target.position, transform.position);
+        _steering = base.GetSteering();
+        if (distance <= _stopRadius)
+        {
+            _steering.Restore();
+        }
 
-    private void FixedUpdate()
-    {
-        if (_target == null)
-            return;
-        if (_direction.magnitude <= _stopRadius)
-            return;
-        
-        _direction.Normalize();
-        transform.Translate(_direction * _speed * Time.deltaTime, Space.World);
-        transform.LookAt(_target);
+        return _steering;
     }
 }

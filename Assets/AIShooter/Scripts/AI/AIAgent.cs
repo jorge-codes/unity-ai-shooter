@@ -46,6 +46,8 @@ public class AIAgent : MonoBehaviour
     private void FixedUpdate()
     {
         transform.Translate(_velocity * _speed * Time.deltaTime, Space.World);
+        // TODO this is temporary
+        transform.LookAt(transform.position + _velocity);
     }
 
     private void LateUpdate()

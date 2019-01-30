@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public abstract class AIBehavior : MonoBehaviour
 {
@@ -15,7 +13,6 @@ public abstract class AIBehavior : MonoBehaviour
     
     public virtual Steering GetSteering()
     {
-        _steering.Restore();
         return _steering;
     }
 

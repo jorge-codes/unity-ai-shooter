@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class AIEscape : MonoBehaviour
+public class AIEscape : AIBehavior
 {
     [SerializeField] private float _stopRadius;
     [SerializeField] private float _speed;
