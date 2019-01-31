@@ -2,7 +2,7 @@
 
 public class AIArrive : AISeek
 {
-    [SerializeField] private float _stopRadius;
+    [SerializeField] protected float _stopRadius;
 
     public override Steering GetSteering()
     {

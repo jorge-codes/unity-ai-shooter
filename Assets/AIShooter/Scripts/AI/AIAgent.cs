@@ -50,8 +50,4 @@ public class AIAgent : MonoBehaviour
         transform.LookAt(transform.position + _velocity);
     }
 
-    private void LateUpdate()
-    {
-        
-    }
 }

@@ -2,10 +2,10 @@
 
 public class AIPathFollower : AISeek
 {
-    [SerializeField] private SimplePath _path;
-    [SerializeField] private float _validRadius;
-    private int _current;
-    private Transform[] _nodes;
+    [SerializeField] protected SimplePath _path;
+    [SerializeField] protected float _validRadius;
+    protected int _current;
+    protected Transform[] _nodes;
     
     // Start is called before the first frame update
 
