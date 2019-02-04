@@ -34,6 +34,8 @@ public class SimplePath : MonoBehaviour
 
     private void OnDrawGizmos()
     {
+        if (_nodes == null) return;
+        
         Vector3 origin, target;
         Gizmos.color = Color.magenta;
         int i, j;
