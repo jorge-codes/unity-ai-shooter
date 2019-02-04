@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 3230901605624700402}
   - component: {fileID: 3230901605624700403}
   - component: {fileID: 3230901605624700400}
-  - component: {fileID: 3230901605624700406}
+  - component: {fileID: 4707642745677872784}
   - component: {fileID: 3230901605624700407}
+  - component: {fileID: 1872578189}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -80,7 +81,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &3230901605624700406
+--- !u!114 &4707642745677872784
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,7 +90,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3230901605624700404}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31a411368a65e364c9ca52e7c624b475, type: 3}
+  m_Script: {fileID: 11500000, guid: c523e6baebeebec4ab347baed29180e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 4
@@ -108,6 +109,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _camera: {fileID: 0}
   _animator: {fileID: 3230901604609181111}
+--- !u!114 &1872578189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3230901605624700404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16d3cb6fbb08d0c4c9786f3cde82b180, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3230901604599832161
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -119,10 +132,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ToonSoldiers_engineer
       objectReference: {fileID: 0}
-    - target: {fileID: 9558998, guid: 0da9de283a7ba434d96430736add1c30, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 8e5622437d77392478d8691b55cb3da1, type: 2}
     - target: {fileID: 491734, guid: 0da9de283a7ba434d96430736add1c30, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -167,39 +176,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 143950, guid: 0da9de283a7ba434d96430736add1c30, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 195118, guid: 0da9de283a7ba434d96430736add1c30, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 169768, guid: 0da9de283a7ba434d96430736add1c30, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 111346, guid: 0da9de283a7ba434d96430736add1c30, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 111878, guid: 0da9de283a7ba434d96430736add1c30, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 191936, guid: 0da9de283a7ba434d96430736add1c30, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 9558998, guid: 0da9de283a7ba434d96430736add1c30, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 8e5622437d77392478d8691b55cb3da1, type: 2}
     - target: {fileID: 172878, guid: 0da9de283a7ba434d96430736add1c30, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 189514, guid: 0da9de283a7ba434d96430736add1c30, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 176046, guid: 0da9de283a7ba434d96430736add1c30, type: 3}
+    - target: {fileID: 195118, guid: 0da9de283a7ba434d96430736add1c30, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}

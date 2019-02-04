@@ -14,13 +14,13 @@ public class AIAgent : MonoBehaviour
     
     [SerializeField] protected float _speed;
     [SerializeField] protected Transform _target;
-    private Vector3 _velocity;
-    private float _angular;
+    protected Vector3 _velocity;
+    protected float _angular;
 
     private AIBehavior _behavior;
         
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         _velocity = Vector3.zero;
         _behavior = GetComponent<AIBehavior>();
@@ -31,7 +31,7 @@ public class AIAgent : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
         if (_behavior == null)
             return;
@@ -41,10 +41,10 @@ public class AIAgent : MonoBehaviour
         _angular = steering.angular;
     }
 
-    private void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         transform.Translate(_velocity * _speed * Time.deltaTime, Space.World);
-        // TODO this is temporary
+        // TODO this is temporary (remove)
         transform.LookAt(transform.position + _velocity);
     }
 
