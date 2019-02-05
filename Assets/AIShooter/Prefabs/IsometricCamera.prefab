@@ -97,4 +97,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 3
   _target: {fileID: 0}
+  _actionRadius: 3
   _stopRadius: 0.01
